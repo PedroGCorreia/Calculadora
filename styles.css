@@ -1,0 +1,73 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #0E0E0E;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.calculadora {
+    background-color:#0E0E0E;
+    border-radius: 10px;
+    width: 21vw;
+    height: 55vh;
+    box-shadow: 0 0 25px 0 rgba(0, 255, 55, 0.4);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.visor {
+    background-color:#1F1E1E;
+    border-radius: 10px;
+    width: 18vw;
+    text-align: right;
+    padding: 15px;
+    font-size: 30px;
+    color: white;
+}
+
+.teclas {
+    padding: 25px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: repeat(5, 4rem);
+}
+
+.teclas button{
+    border-radius: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+[data-tecla="somar"], [data-tecla="subtrair"], [data-tecla="multiplicar"], [data-tecla="dividir"], [data-tipo-tecla="igual"] {
+    background-color:#19DC08;
+}
+
+.numeros {
+    background-color:white;
+}
+
+[data-tipo-tecla="clear"] {
+    grid-column: span 3;
+}
+
+[data-tipo-tecla="igual"] {
+    grid-column: span 2;
+}
+
+footer {
+    color: white;
+}
